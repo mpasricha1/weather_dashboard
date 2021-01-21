@@ -15,9 +15,9 @@
 			<div class="container-fluid">
 				<h3>Search for a City</h3>
 				<div class="input-group mb-3">
-  					<input type="text" class="form-control" placeholder="Enter City" aria-label="City" aria-describedby="basic-addon2">
+  					<input type="text" class="form-control" placeholder="Enter City" id="cityname">
   					<div class="input-group-append">
-    					<button class="btn btn-secondary" type="button">Search</button>
+    					<button class="btn btn-secondary searchbtn" type="button">Search</button>
   					</div>
 				</div>
 			</div> 
@@ -27,19 +27,19 @@
 				<div class="jumbotron jumbotron-fluid">
   					<div class="container">
   						<div class="row">
-    						<h3 id="city">City Name</h3>
+    						<h3 id="city"></h3>
     					</div>
     					<div class="row">
     						<p id="temp">Temperature:</p>
     					</div>
     					<div class="row">
-    						<p id="temp">Humidity:</p>
+    						<p id="humid">Humidity:</p>
     					</div>
     					<div class="row">
-    						<p id="temp">Wind Speed:</p>
+    						<p id="wind">Wind Speed:</p>
     					</div>
     					<div class="row">
-    						<p id="temp">UV Index:</p>
+    						<p id="uv">UV Index:</p>
     					</div>
 
   					</div>
@@ -101,6 +101,8 @@
 		</div>
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+	<script src="assets/js/script.js"></script>
 
 </body>
 </html>
