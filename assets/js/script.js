@@ -26,7 +26,7 @@ function getUVData(lat, lon){
 			}else{
 				$("#uv").css({"background-color": "red", "color": "white"});
 			};
-		};
+		}
 	});
 };
 
@@ -45,7 +45,7 @@ function getOneDayData(city){
 	    	$("#temp").html(`Temperature: ${convertToF(response.main.temp)}&#176;F`);
 	    	$("#humid").text(`Humidity: ${response.main.humidity}%`); 
 	    	$("#wind").text(`Wind Speed: ${response.wind.speed} MPH`); 
-      	};
+      	}
     });
 };
 
@@ -67,9 +67,20 @@ function getFiveDayData(city){
 					idCounter++;
 				};
 			};
-		};
+		}
 	});
 };
+
+function storeLastCity(city){
+	localStorage.setItem("city",city);
+};
+
+function renderPage(){
+	var city = localStorage.getItem("city")
+	getOneDayData(city);
+	getFiveDayData(city);
+
+}
 
 $(".searchbtn").on("click", function(){
 	var city = $("#cityname").val();
@@ -79,6 +90,7 @@ $(".searchbtn").on("click", function(){
 
 	getOneDayData(city);
 	getFiveDayData(city);
+	storeLastCity(city); 
 
 }); 
 
@@ -87,3 +99,5 @@ $(document).on("click", ".prevsearch", function(){
 	getOneDayData(city);
 	getFiveDayData(city);
 });
+
+renderPage();
