@@ -1,6 +1,8 @@
 # Weather Dashboard 
 URL: https://mpasricha1.github.io/weather_dashboard/
-![dashboard](/assets/images/dashboard.png)
+
+![dashboard](assets/images/dashboard.png)
+
 ## Overview
 ### Technologies Used 
  * Bootstrap
