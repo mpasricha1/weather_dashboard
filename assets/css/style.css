@@ -4,9 +4,6 @@ h1{
 	margin-left: 50%;
 	transform: translate(-50%, 0);
 }
-.searchbtn{
-	background-color: #5F9EA0;
-}
 .jumbotron {
     background: none,     
 }
@@ -19,18 +16,9 @@ h1{
 #fiveday{
 	padding-top:100px;
 }
-#card-body{
-	background-color: blue;
-}
-.navbar{
+.navbar, .card-body, .searchbtn{
 	background-color: #5F9EA0;
 }
-.card-body{
-	background-color: #5F9EA0;
-}
-.card-title{
-	color:white;
-}
-.cardinfo{
+.card-title, .cardinfo{
 	color:white;
 }
