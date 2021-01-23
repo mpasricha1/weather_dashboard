@@ -1,6 +1,6 @@
 <h1>Weather Dashboard</h1> 
 <p>URL: https://mpasricha1.github.io/weather_dashboard/</p>
-<img src="/mpasricha1/weather_dashboard/assets/images/dashboard.png>
+![dashboard](assets/images/dashboard.png)
 <h2>Overview</h2>
 <h3>Technologies Used</h3> 
 <ul>
