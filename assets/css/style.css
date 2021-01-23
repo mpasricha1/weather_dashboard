@@ -14,8 +14,20 @@ h1{
 	padding-right:100px;
 }
 #fiveday{
-	margin-top:150px;
+	padding-top:100px;
 }
 #card-body{
 	background-color: blue;
+}
+.navbar{
+	background-color: #5F9EA0;
+}
+.card-body{
+	background-color: #5F9EA0;
+}
+.card-title{
+	color:white;
+}
+.cardinfo{
+	color:white;
 }
