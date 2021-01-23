@@ -1,11 +1,14 @@
-.jumbotron {
-    background: none,     
-}
 h1{
 	font-size:40px;
 	color:white;
 	margin-left: 50%;
 	transform: translate(-50%, 0);
+}
+.searchbtn{
+	background-color: #5F9EA0;
+}
+.jumbotron {
+    background: none,     
 }
 #topinfo{
 	margin-top:25px;
