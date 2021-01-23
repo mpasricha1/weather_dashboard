@@ -1,0 +1,21 @@
+.jumbotron {
+    background: none,     
+}
+h1{
+	font-size:40px;
+	color:white;
+	margin-left: 50%;
+	transform: translate(-50%, 0);
+}
+#topinfo{
+	margin-top:25px;
+}
+#searchbox{
+	padding-right:100px;
+}
+#fiveday{
+	margin-top:150px;
+}
+#card-body{
+	background-color: blue;
+}

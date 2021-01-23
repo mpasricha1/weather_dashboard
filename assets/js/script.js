@@ -1,9 +1,9 @@
 var APIKey = "2b4f7000607c6ae8526e73b01a82fcae";
-var today = moment().format("MMMM Do YYYY");
 
 function convertToF(temp){
 	return Math.floor((temp - 273.15) * 1.80 + 32);
 };
+
 function convertDate(date){
 	var newDate = new Date(0); 
 	newDate.setUTCSeconds(date);
@@ -11,9 +11,20 @@ function convertDate(date){
 
 	return newDate;
 };
+
+function storeLastCity(city){
+	localStorage.setItem("city",city);
+};
+
+function renderPage(){
+	var city = localStorage.getItem("city")
+	getOneDayData(city);
+	getFiveDayData(city);
+
+}
+
 function getUVData(lat, lon){
 	var queryURL = `http://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${lon}&appid=${APIKey}`;
-
 	$.ajax({
 		url: queryURL, 
 		method: "GET", 
@@ -51,7 +62,6 @@ function getOneDayData(city){
 
 function getFiveDayData(city){
 	var queryURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${APIKey}`
-
 	$.ajax({
 		url:queryURL, 
 		method: "GET", 
@@ -71,18 +81,8 @@ function getFiveDayData(city){
 	});
 };
 
-function storeLastCity(city){
-	localStorage.setItem("city",city);
-};
-
-function renderPage(){
-	var city = localStorage.getItem("city")
-	getOneDayData(city);
-	getFiveDayData(city);
-
-}
-
-$(".searchbtn").on("click", function(){
+$(".searchbtn").on("click", function(event){
+	event.preventDefault();
 	var city = $("#cityname").val();
 	$("#cityname").val("");
 	var listItem = $("<button>").attr({"class": "list-group-item list-group-item-action prevsearch", "type": "button"}).text(city)
